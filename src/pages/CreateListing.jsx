@@ -17,7 +17,8 @@ import { useNavigate } from "react-router-dom";
 export default function CreateListing() {
   const navigate = useNavigate();
   const auth = getAuth();
-  const [geolocationEnabled, setGeoLocationEnabled] = useState(false);
+  const [geolocationEnabled] = useState(false);
+  // const [setGeoLocationEnabled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     type: "rent",
