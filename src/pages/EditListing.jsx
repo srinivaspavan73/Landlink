@@ -97,6 +97,7 @@ export default function EditListing() {
     }
 
     ////////////////////////// ///////////additional code /////////////////////////////////////////////
+    let geolocation = {};
     if (geolocationEnabled) {
       return;
     } else {
