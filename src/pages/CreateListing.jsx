@@ -18,7 +18,7 @@ export default function CreateListing() {
   const navigate = useNavigate();
   const auth = getAuth();
   const [geolocationEnabled] = useState(false);
-  // const [setGeoLocationEnabled] = useState(false);
+  const [setGeoLocationEnabled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     type: "rent",
