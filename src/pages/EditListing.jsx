@@ -96,6 +96,14 @@ export default function EditListing() {
       }));
     }
 
+    ////////////////////////// ///////////additional code /////////////////////////////////////////////
+    if (geolocationEnabled) {
+      return;
+    } else {
+      geolocation.lat = latitude;
+      geolocation.lng = longitude;
+    }
+
     // Text and Boolean
     if (!e.target.files) {
       setFormData((prevState) => ({

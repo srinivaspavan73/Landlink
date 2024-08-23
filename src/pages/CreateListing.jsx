@@ -55,12 +55,12 @@ export default function CreateListing() {
   function onChange(e) {
     let boolean = null;
 
-    if (geolocationEnabled) {
-      return;
-    } else {
-      geolocation.lat = +latitude;
-      geolocation.lng = +longitude;
-    }
+    // if (geolocationEnabled) {
+    //   return;
+    // } else {
+    //   geolocation.lat = +latitude;
+    //   geolocation.lng = +longitude;
+    // }
 
     if (e.target.value === "true") {
       boolean = true;
@@ -90,13 +90,13 @@ export default function CreateListing() {
     e.preventDefault();
     setLoading(true);
 
-    if (geolocationEnabled) {
-      // No need to set geolocation as user has disabled it
-      geolocation = {};
-    } else {
-      geolocation.lat = +latitude;
-      geolocation.lng = +longitude;
-    }
+    // if (geolocationEnabled) {
+    //   // No need to set geolocation as user has disabled it
+    //   geolocation = {};
+    // } else {
+    //   geolocation.lat = +latitude;
+    //   geolocation.lng = +longitude;
+    // }
 
     if (+discountedPrice >= +regularPrice) {
       setLoading(false);
@@ -112,12 +112,12 @@ export default function CreateListing() {
 
     let geolocation = {};
 
-    if (geolocationEnabled) {
-      return;
-    } else {
-      geolocation.lat = +latitude;
-      geolocation.lng = +longitude;
-    }
+    // if (geolocationEnabled) {
+    //   return;
+    // } else {
+    //   geolocation.lat = +latitude;
+    //   geolocation.lng = +longitude;
+    // }
 
     async function storeImage(image) {
       return new Promise((resolve, reject) => {
