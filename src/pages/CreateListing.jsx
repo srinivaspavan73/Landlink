@@ -55,6 +55,14 @@ export default function CreateListing() {
 
   function onChange(e) {
     let boolean = null;
+
+    if (geolocationEnabled) {
+      return;
+    } else {
+      geolocation.lat = +latitude;
+      geolocation.lng = +longitude;
+    }
+
     if (e.target.value === "true") {
       boolean = true;
     }
@@ -82,6 +90,15 @@ export default function CreateListing() {
   async function onSubmit(e) {
     e.preventDefault();
     setLoading(true);
+
+    if (geolocationEnabled) {
+      // No need to set geolocation as user has disabled it
+      geolocation = {};
+    } else {
+      geolocation.lat = +latitude;
+      geolocation.lng = +longitude;
+    }
+
     if (+discountedPrice >= +regularPrice) {
       setLoading(false);
       toast.error("Discounted price needs to be less than regular price");
