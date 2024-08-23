@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBIoUrmx2O8F78IZ7VS-wCFWXuAb2MswGE",
-  authDomain: "realtor-react-d5fa0.firebaseapp.com",
-  projectId: "realtor-react-d5fa0",
-  storageBucket: "realtor-react-d5fa0.appspot.com",
-  messagingSenderId: "1021179635651",
-  appId: "1:1021179635651:web:c1e7f2d63c3c066c7d3f76",
+  apiKey: "AIzaSyAPQPrGuxReK93bv7MmsW7FzqJvwmvVAjY",
+  authDomain: "land-link.firebaseapp.com",
+  projectId: "land-link",
+  storageBucket: "land-link.appspot.com",
+  messagingSenderId: "144887781694",
+  appId: "1:144887781694:web:330f47a7c23dbb1479746f",
 };
 
 // Initialize Firebase
