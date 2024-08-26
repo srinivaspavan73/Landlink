@@ -17,7 +17,8 @@ import { useNavigate } from "react-router-dom";
 export default function CreateListing() {
   const navigate = useNavigate();
   const auth = getAuth();
-  const [geolocationEnabled , setGeoLocationEnabled] = useState(false);
+  const [geolocationEnabled] = useState(false);
+  // const [geolocationEnabled, setGeoLocationEnabled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     type: "rent",
@@ -54,14 +55,6 @@ export default function CreateListing() {
 
   function onChange(e) {
     let boolean = null;
-
-    // if (geolocationEnabled) {
-    //   return;
-    // } else {
-    //   geolocation.lat = +latitude;
-    //   geolocation.lng = +longitude;
-    // }
-
     if (e.target.value === "true") {
       boolean = true;
     }
@@ -89,15 +82,6 @@ export default function CreateListing() {
   async function onSubmit(e) {
     e.preventDefault();
     setLoading(true);
-
-    // if (geolocationEnabled) {
-    //   // No need to set geolocation as user has disabled it
-    //   geolocation = {};
-    // } else {
-    //   geolocation.lat = +latitude;
-    //   geolocation.lng = +longitude;
-    // }
-
     if (+discountedPrice >= +regularPrice) {
       setLoading(false);
       toast.error("Discounted price needs to be less than regular price");
@@ -112,12 +96,12 @@ export default function CreateListing() {
 
     let geolocation = {};
 
-    // if (geolocationEnabled) {
-    //   return;
-    // } else {
-    //   geolocation.lat = +latitude;
-    //   geolocation.lng = +longitude;
-    // }
+    if (geolocationEnabled) {
+      return;
+    } else {
+      geolocation.lat = +latitude;
+      geolocation.lng = +longitude;
+    }
 
     async function storeImage(image) {
       return new Promise((resolve, reject) => {

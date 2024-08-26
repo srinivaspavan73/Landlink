@@ -17,7 +17,8 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function EditListing() {
   const navigate = useNavigate();
   const auth = getAuth();
-  const [geolocationEnabled, setGeoLocationEnabled] = useState(false);
+  const [geolocationEnabled] = useState(false);
+  // const [geolocationEnabled, setGeoLocationEnabled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [listing, setListing] = useState(null);
   const [formData, setFormData] = useState({
@@ -94,15 +95,6 @@ export default function EditListing() {
         ...prevState,
         images: e.target.files,
       }));
-    }
-
-    ////////////////////////// ///////////additional code /////////////////////////////////////////////
-    let geolocation = {};
-    if (geolocationEnabled) {
-      return;
-    } else {
-      geolocation.lat = latitude;
-      geolocation.lng = longitude;
     }
 
     // Text and Boolean
