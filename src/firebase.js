@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAPQPrGuxReK93bv7MmsW7FzqJvwmvVAjY",
-  authDomain: "land-link.firebaseapp.com",
-  projectId: "land-link",
-  storageBucket: "land-link.appspot.com",
-  messagingSenderId: "144887781694",
-  appId: "1:144887781694:web:330f47a7c23dbb1479746f",
+  apiKey: "AIzaSyAayGlfwi2jqv__vODFBAbEkqBYZfeLqHk",
+  authDomain: "land-4c345.firebaseapp.com",
+  projectId: "land-4c345",
+  storageBucket: "land-4c345.appspot.com",
+  messagingSenderId: "673137103381",
+  appId: "1:673137103381:web:b6642c19b964ac489ff41c",
 };
 
 // Initialize Firebase
